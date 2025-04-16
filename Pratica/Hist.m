@@ -21,8 +21,8 @@ plot(h)
 
 imMask = imGray;
 
-for i = 1:size(imGray, 1)
-  for j = 1:size(imGray, 2)
+for(i = 1:size(imGray, 1))
+  for(j = 1:size(imGray, 2))
     if(imGray(i,j) < 100)
       imMask(i,j) = 1;
     else
