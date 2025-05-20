@@ -17,7 +17,7 @@ imshow(m2)
 %percorrer a matriz m2 e definir os valores dos pixels do círculo como cinza médio
 for(i=1:size(m2,1))
   for(j=1:size(m2,2))
-    if(m2(i,j))
+    if(m2(i,j)==1)
       m2(i,j,:) = 126;
     else
       m2(i,j,:) = 0;
