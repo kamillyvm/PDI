@@ -16,7 +16,7 @@ for(cont = 170:190)
   B = im(:,:,3);
 
   %cria uma máscara pra destacar a folha
-  %verde mais forte que vermelho e azul
+  %mostre os pixels onde o verde é 20 unidades mais forte que vermelho e o azul
   mask = (G > R + 20) & (G > B + 20);
 
   img_binaria = uint8(mask) * 255;
@@ -27,8 +27,8 @@ for(cont = 170:190)
   subplot(1,2,2), imshow(img_binaria), title('segmentação manual');
 
   %salva as imagens segmentada
-  img_segmentada = strcat(caminho, 'segmentada_(', int2str(cont), ').png');
-  imwrite(img_binaria, img_segmentada);
+  %img_segmentada = strcat(caminho, 'segmentada_(', int2str(cont), ').png');
+  %imwrite(img_binaria, img_segmentada);
 
   %só espera 1 segundo antes de ir para a próxima
   pause(1);
